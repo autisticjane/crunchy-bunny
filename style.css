@@ -110,7 +110,7 @@ footer ul li{
 }
 header ul,
 footer ul{
-	font:700 1.4rem/1.4rem "Poppins",sans-serif
+	font:700 1.4rem/1.4rem "Poppins",sans-serif;
 }
 header ul li:last-of-type,
 footer ul li:last-of-type{
@@ -119,11 +119,17 @@ footer ul li:last-of-type{
 footer ul li:first-of-type{
 	padding-left:0
 }
+footer ul{
+	flex-shrink:2;
+	max-width:100%;
+	justify-content:space-between
+}
 /* --- Containers --- */
 header,
 .body__main,
 footer{
 	margin:0 auto;
+	max-width:95%
 }
 header,
 .body__main,
@@ -132,11 +138,10 @@ footer{
 }
 footer{
 	font:400 1rem/1.1rem "Poppins",sans-serif;
-	text-align:center;
 	color:#939393;
 	display:flex;
 	flex-direction:column-reverse;
-	align-items:center
+	align-items:center;
 }
 @media only screen and (min-width:590px){
 	.body__main,
