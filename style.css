@@ -6,7 +6,13 @@
  * Author: Jane
  * Author URI: https://janepedia.com/
  * Copyright © 2018 Jane Lawson. This work is not to be redistributed. All rights reserved.
- */
+ *
+ * --- Contents ---
+ * 1. Basic Styling
+ * 2. Links
+ * 3. Classes
+ 
+ * --- Basic Styling -- */
 body{
 	font:400 1.3rem/2.3rem "Merriweather", sans-serif;
 	margin:0 auto;
@@ -45,4 +51,14 @@ h5{
 }
 h6{
 	font-size:1.7rem
+}
+/* --- Links --- */
+a{
+	color:#e65722;
+	font-weight:600;
+	text-decoration:none
+}
+a:hover{
+	color:#009fd4;
+	border-bottom:1px solid #009fd4
 }
