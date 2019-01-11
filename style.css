@@ -56,7 +56,8 @@ h5{
 	font-size:2rem;
 	text-transform:uppercase
 }
-h6{
+h6,
+aside h2{
 	font-size:1.7rem
 }
 /* --- Links --- */
