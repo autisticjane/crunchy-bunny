@@ -24,11 +24,17 @@ strong{
 i,em{
 	font-style:italic
 }
-strong > em,em > strong{
+strong > em,
+em > strong{
 	font-weight:600;
 	font-style:italic
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
 	font-family: "Poppins", sans-serif;
 	font-weight: 700
 }
