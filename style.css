@@ -132,3 +132,47 @@ footer{
 	flex-direction:column-reverse;
 	align-items:center
 }
+@media only screen and (min-width:590px){
+	.body__main,
+	header,
+	footer{
+		max-width:1024px
+	}
+	.body__main{
+		display:block
+	}
+	section{
+		float:left;
+		max-width:70%
+	}
+	.sidebar{
+		max-width:25%;
+		font-size:1rem;
+		line-height:1.4rem;
+		float:right
+	}
+	header{
+		display:flex;
+		justify-content:space-between;
+		flex-flow:row wrap;
+		align-items:center;
+		align-content:flex-start
+		}
+	header ul {
+		display:flex;
+		flex-flow:row wrap;
+		list-style-type:none
+	}
+	header ul li {
+		padding:0 1.4em 0 0;
+		font-size:1.4rem;
+		}
+	footer{
+		clear:both;
+		display:flex;
+		justify-content:space-between;
+		flex-flow:row wrap;
+		align-items:center;
+		align-content:flex-start
+	}
+}
