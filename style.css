@@ -16,7 +16,7 @@
 body{
 	font:400 1.3rem/2.3rem "Merriweather", sans-serif;
 	margin:0 auto;
-	color:#444
+	color:#444;
 }
 strong{
 	font-weight:600
@@ -39,7 +39,8 @@ h6{
 	font-weight: 700
 }
 h1{
-	font-size:3.5rem
+	font-size:3.5rem;
+	line-height:3.5rem
 }
 h2{
 	font-size:3rem
@@ -68,7 +69,54 @@ a:hover{
 	color:#009fd4;
 	border-bottom:1px solid #009fd4
 }
-/* --- Header --- */
-/* --- Content --- */
-/* --- Sidebar --- */
-/* --- Footer --- */
+/* --- Navigation --- */
+h1.title{
+	text-align:center;
+	font-size:3.5rem;
+	line-height:3.5rem
+}
+header a:hover{
+	border-bottom:none
+}
+header ul{
+	display:flex;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-transform:lowercase;
+	justify-content:space-between;
+	align-items:flex-start;
+	flex-flow:row wrap
+}
+header ul li{
+ padding:0 1.4em 0 0;
+ font-size:1.4rem
+}
+footer ul{
+ display:flex;
+ flex-flow:row-wrap;
+ list-style-type:none
+}
+footer ul li{
+ padding:0 1.4em 0 0;
+ font-size:1rem;
+}
+header ul,
+footer ul{
+	font:700 1.4rem/1.4rem "Poppins",sans-serif
+}
+header ul li:last-of-type,
+footer ul li:last-of-type{
+	padding-right:0
+}
+/* --- Containers --- */
+header{
+	margin:0 auto;
+}
+header,
+footer{
+	padding:10px
+}
+footer{
+	font:400 1rem/1.1rem "Poppins",sans-serif;
+}
