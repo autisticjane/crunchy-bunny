@@ -93,6 +93,11 @@ small{
 big{
 	font:300 1.2rem/1.4rem "Poppins",sans-serif;
 }
+::selection,
+::-moz-selection{
+	background:#e73c4e;
+	color:#fff
+}
 /* --- Links --- */
 a{
 	color:#e65722;
