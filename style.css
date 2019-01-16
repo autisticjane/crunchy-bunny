@@ -195,10 +195,12 @@ footer{
 }
 .alignright{
 	float:right;
+	padding:5px;
 	text-align:right
 }
 .alignleft{
 	float:left;
+	padding:5px;
 	text-align:left
 }
 @media only screen and (min-width:590px){
