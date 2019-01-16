@@ -223,8 +223,7 @@ footer{
 		align-items:center;
 		align-content:flex-start
 	}
-	.page__full  section,
-	.full-sidebar{
+	.page__full  section{
 		clear:both;
 		max-width:100%
 	}
