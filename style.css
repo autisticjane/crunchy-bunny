@@ -150,6 +150,11 @@ footer{
 	flex-direction:column-reverse;
 	align-items:center;
 }
+.sidebar-item p{
+	color:#939393;
+	font:300 1rem/1.6rem "Poppins",sans-serif;
+	text-align:center
+}
 @media only screen and (min-width:590px){
 	.body__main,
 	header,
@@ -165,9 +170,7 @@ footer{
 	}
 	.sidebar{
 		max-width:25%;
-		font-size:1.15rem;
-		line-height:1.6rem;
-		float:right
+		float:right;
 	}
 	header{
 		display:flex;
