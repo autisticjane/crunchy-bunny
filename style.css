@@ -21,6 +21,10 @@ body{
 img{
 	max-width:100%
 }
+.octogon{
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
+}
 strong{
 	font-weight:600
 }
@@ -180,6 +184,19 @@ footer{
 	color:#939393;
 	font:300 1rem/1.6rem "Poppins",sans-serif;
 	text-align:center
+}
+/* --- Classes --- */
+.aligncenter{
+	clear:both;
+	text-align:center
+}
+.alignright{
+	float:right;
+	text-align:right
+}
+.alignleft{
+	float:left;
+	text-align:left
 }
 @media only screen and (min-width:590px){
 	.body__main,
