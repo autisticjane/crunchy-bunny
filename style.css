@@ -27,6 +27,10 @@ strong{
 i,em{
 	font-style:italic
 }
+pre > code{
+	background:#939393;
+	color:#807d67
+}
 strong > em,
 em > strong{
 	font-weight:600;
