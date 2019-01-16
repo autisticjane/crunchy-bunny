@@ -43,19 +43,20 @@ h6{
 }
 h1{
 	font-size:3.5rem;
-	line-height:3.5rem;
-	color:#009fd4
+	line-height:3.5rem
 }
 .body__main h1,
 .sidebar h2{
 	margin:0
 }
 h2{
-	font-size:3rem
+	font-size:3rem;
+	color:#009fd4
 }
 h3{
 	font-size:2.7rem;
-	font-style:italic
+	font-style:italic;
+	color:#b8860b
 }
 h4{
 	font-size:2.5rem
@@ -67,6 +68,11 @@ h5{
 h6,
 aside h2{
 	font-size:1.7rem
+}
+aside h2{
+	color:#333;
+	text-align:right;
+	text-transform:lowercase
 }
 small{
 	font:300 1rem/1.2rem "Poppins",sans-serif;
