@@ -41,6 +41,7 @@ h6{
 h1{
 	font-size:3.5rem;
 	line-height:3.5rem;
+	color:#009fd4
 }
 .body__main h1,
 .sidebar h2{
@@ -82,9 +83,9 @@ a:hover{
 }
 /* --- Navigation --- */
 h1.title{
+	text-align:center;
 	font-size:3.5rem;
-	line-height:3.5rem;
-	color:#009fd4
+	line-height:3.5rem
 }
 header a:hover{
 	border-bottom:none
