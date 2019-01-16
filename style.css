@@ -51,11 +51,17 @@ h1{
 }
 h2{
 	font-size:3rem;
-	color:#009fd4
 }
 h3{
 	font-size:2.7rem;
 	font-style:italic;
+}
+h2,
+h5{
+	color:#009fd4
+}
+h3,
+h6{
 	color:#b8860b
 }
 h4{
