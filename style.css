@@ -18,6 +18,9 @@ body{
 	margin:0 auto;
 	color:#444;
 }
+img{
+	max-width:100%
+}
 strong{
 	font-weight:600
 }
