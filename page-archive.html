@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0,width=device-width">
+		<link rel="dns-prefetch" href="https://crunchyfamily.com/wp-content/uploads/">
+		<title>About | Crunchy Family</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather|Poppins:700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body class="page__full">
+		<header>
+			<h1 class="title"><a href="#" title="Go to homepage">Crunchy Family</a></h1>
+			<nav>	
+				<ul>
+					<li><a href="#">Food</a></li>
+					<li><a href="#">Lifestyle</a></li>
+					<li><a href="#">Parenting</a></li>
+					<li><a href="#">Pregnancy</a></li>
+				</ul>
+			</nav>
+		</header>
+		<aside class="full-sidebar">
+				search form [go]
+		</aside>
+		<div class="body__main">
+			<section>
+				<h1>All posts</h1>
+				<h2>Archives by author</h2>
+					<ul class="column">
+						<li><a href="#">Charlise</a> (#)</li>
+						<li><a href="#">Liz</a> (#)</li>
+					</ul>
+				<h2>Archives by month</h2>
+					<ul class="column">
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+						<li><a href="#">Month YYYY</a></li>
+					</ul>
+				<h2>Archives by year</h2>
+					<ul class="column">
+						<li><a href="#">2014</a></li>
+						<li><a href="#">2015</a></li>
+						<li><a href="#">2016</a></li>
+						<li><a href="#">2017</a></li>
+						<li><a href="#">2018</a></li>
+						<li><a href="#">2019</a></li>
+					</ul>
+			</section>
+		</div>
+		<footer>
+			<p>&copy; 2019 Crunchy Family</p>
+			<nav class="menu__footer">
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="https://github.com/gotjane/crunchy-bunny">Design</a></li>
+				</ul>
+			</nav>
+		</footer>
+       <!--js-->
+            <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+			<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        <!--end js-->
+	</body>
+</html>
