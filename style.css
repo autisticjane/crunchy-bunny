@@ -27,11 +27,11 @@ strong{
 i,em{
 	font-style:italic
 }
-p > code{
+code{
 	background:#eee;
 	border:2px solid #ddd;
 	border-radius:10px;
-	color:#e73c4e;
+	color:#009fd4;
 	padding:5px 10px
 }
 strong > em,
