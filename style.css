@@ -158,12 +158,14 @@ footer ul li:first-of-type{
 header,
 .body__main,
 footer,
-footer ul{
+footer ul,
+.full-sidebar{
 	margin:0 auto;
 	max-width:95%
 }
 header,
 .body__main,
+.full-sidebar,
 footer{
 	padding:10px
 }
@@ -182,7 +184,8 @@ footer{
 @media only screen and (min-width:590px){
 	.body__main,
 	header,
-	footer{
+	footer,
+	.full-sidebar{
 		max-width:1024px
 	}
 	.body__main{
@@ -220,7 +223,8 @@ footer{
 		align-items:center;
 		align-content:flex-start
 	}
-	.page__full  section{
+	.page__full  section,
+	.full-sidebar{
 		clear:both;
 		max-width:100%
 	}
