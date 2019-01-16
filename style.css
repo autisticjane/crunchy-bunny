@@ -28,8 +28,8 @@ i,em{
 	font-style:italic
 }
 p > code{
-	background:#f9f9f9;
-	border:2px solid #aaa;
+	background:#eee;
+	border:2px solid #ddd;
 	border-radius:10px;
 	color:#e73c4e;
 	padding:5px 10px
