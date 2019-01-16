@@ -186,6 +186,9 @@ footer{
 	text-align:center
 }
 /* --- Classes --- */
+.center{
+	text-align:center
+}
 .aligncenter{
 	clear:both;
 	text-align:center
