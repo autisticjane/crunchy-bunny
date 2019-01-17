@@ -118,10 +118,10 @@ h1.title{
 	font-size:3.5rem;
 	line-height:3.5rem
 }
-header a:hover{
+.site--header a:hover{
 	border-bottom:none
 }
-header ul{
+.site--header ul{
 	display:flex;
 	list-style:none;
 	margin:0;
@@ -131,31 +131,31 @@ header ul{
 	align-items:flex-start;
 	flex-flow:row wrap
 }
-header ul li{
+.site--header ul li{
  padding:0 1.4em 0 0;
  font-size:1.4rem
 }
-footer ul{
+.site--footer ul{
  display:flex;
  flex-flow:column-wrap;
  list-style-type:none;
  min-width:0;
  max-width:95%;
 }
-footer ul li{
+.site--footer ul li{
  padding:0 1.4em 0 0;
  font-size:1rem;
  flex-basis:1 1 auto
 }
-header ul,
-footer ul{
+.site--header ul,
+.site--footer ul{
 	font:700 1.4rem/1.4rem "Poppins",sans-serif;
 }
-header ul li:last-of-type,
-footer ul li:last-of-type{
+.site--header ul li:last-of-type,
+.site--footer ul li:last-of-type{
 	padding-right:0
 }
-footer ul li:first-of-type{
+.site--footer ul li:first-of-type{
 	padding-left:0
 }
 /* --- Containers --- */
@@ -173,7 +173,7 @@ header,
 footer{
 	padding:10px
 }
-footer{
+.site--footer{
 	font:600 1rem/1.1rem "Poppins",sans-serif;
 	color:#939393;
 	display:flex;
@@ -241,23 +241,23 @@ footer{
 		max-width:25%;
 		float:right;
 	}
-	header{
+	.site--header{
 		display:flex;
 		justify-content:space-between;
 		flex-flow:row wrap;
 		align-items:center;
 		align-content:flex-start
 		}
-	header ul {
+	.site--header ul {
 		display:flex;
 		flex-flow:row wrap;
 		list-style-type:none
 	}
-	header ul li {
+	.site--header ul li {
 		padding:0 1.4em 0 0;
 		font-size:1.4rem;
 		}
-	footer{
+	.site--footer{
 		clear:both;
 		display:flex;
 		justify-content:space-between;
