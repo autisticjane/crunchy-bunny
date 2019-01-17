@@ -212,6 +212,7 @@ span{
 }
 .author-social{
 	display:flex;
+	list-type:none
 }
 @media only screen and (min-width:590px){
 	.body__main,
