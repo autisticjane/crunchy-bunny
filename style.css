@@ -174,7 +174,7 @@ footer{
 	padding:10px
 }
 footer{
-	font:400 1rem/1.1rem "Poppins",sans-serif;
+	font:600 1rem/1.1rem "Poppins",sans-serif;
 	color:#939393;
 	display:flex;
 	flex-direction:column-reverse;
@@ -202,6 +202,10 @@ footer{
 	float:left;
 	padding:5px;
 	text-align:left
+}
+.subtitle{
+	color:grey;
+	font:italic 1.5rem/1.7rem "Merriweather",serif
 }
 @media only screen and (min-width:590px){
 	.body__main,
