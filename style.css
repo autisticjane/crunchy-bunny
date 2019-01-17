@@ -210,6 +210,9 @@ footer{
 span{
 	display:inline
 }
+.author-social{
+	display:flex;
+}
 @media only screen and (min-width:590px){
 	.body__main,
 	header,
