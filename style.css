@@ -205,10 +205,7 @@ footer{
 }
 .subtitle{
 	color:grey;
-	font:italic 1.5rem/1.7rem "Merriweather",serif
-}
-span{
-	display:inline
+	font:italic 1.5rem/1.7rem "Poppins",sans-serif
 }
 .author-social ul{
 	list-style-type:none;
