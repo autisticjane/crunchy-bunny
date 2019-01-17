@@ -217,6 +217,12 @@ footer{
 	flex-flow:row wrap;
 	text-transform:lowercase
 }
+.box--listing{
+	border-bottom:none
+}
+.box--hexagon{
+	width:50%
+}
 @media only screen and (min-width:590px){
 	.body__main,
 	header,
