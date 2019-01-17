@@ -210,9 +210,14 @@ footer{
 span{
 	display:inline
 }
-.author-social{
+.author-social ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
 	display:flex;
-	list-type:none
+	justify-content:space-between;
+	flex-flow:row wrap;
+	text-transform:lowercase
 }
 @media only screen and (min-width:590px){
 	.body__main,
