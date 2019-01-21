@@ -105,8 +105,10 @@ big{
 /* --- Links --- */
 a{
 	color:#e65722;
-	
 	text-decoration:none
+}
+.pagination a{
+	color:#b8860b
 }
 a:hover{
 	color:#009fd4;
@@ -199,12 +201,14 @@ footer{
 	clear:both;
 	text-align:center
 }
-.alignright{
+.alignright,
+.pagination__older{
 	float:right;
 	padding:5px;
 	text-align:right
 }
-.alignleft{
+.alignleft,
+.pagination__newer{
 	float:left;
 	padding:5px;
 	text-align:left
@@ -241,6 +245,19 @@ footer{
 }
 .post--listing span{
 	font-family:"Poppins",sans-serif;
+}
+.pagination{
+	clear:both;
+	padding:10px 0;
+	display:flex;
+	justify-content:space-between;
+	border-top:8px solid darkgrey;
+	border-bottom:8px solid darkgrey;
+	border-radius:10px
+}
+.pagination__newer,
+.pagination__older{
+	font-family:"Poppins",sans-serif
 }
 @media only screen and (min-width:590px){
 	.body__main,
