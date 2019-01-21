@@ -217,21 +217,27 @@ footer{
 	flex-flow:row wrap;
 	text-transform:lowercase
 }
-.box--listing{
-	display:flex;
-	justify-content:space-between;
-	flex-flow:row-wrap;
-	align-content:center;
+.post--listing{
+	text-align:center
 }
-.box--post{
-	width:30%
+.post--listing img{
+	clear:both;
+	width:350px;
+	max-width:100%;
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
 }
-.box--post img{
-	width:100%
-}
-.box--post h4{
+.post--listing h4{
 	font-size: 2rem;
-	line-height:2.5rem
+	line-height:2.5rem;
+	text-align:center;
+	margin:10px 0;
+}
+.post--listing ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	font-family:"Poppins",sans-serif;
 }
 @media only screen and (min-width:590px){
 	.body__main,
@@ -279,4 +285,30 @@ footer{
 		clear:both;
 		max-width:100%
 	}
+	.post--listing{
+		display:block;
+		margin:0 auto;
+		padding:10px 0;
+	}
+	.post--listing::after{
+		clear:both;
+	}
+.post--listing img{
+	display:inline;
+	width:200px;
+	max-height:100%;
+}
+.post--listing h4{
+	font-size: 2rem;
+	line-height:2.5rem;
+	text-align:left;
+	margin:0 10px;
+	align-self:flex-start
+}
+.post--listing ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	font-family:"Poppins",sans-serif;
+}
 }
