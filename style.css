@@ -108,7 +108,7 @@ a{
 	text-decoration:none
 }
 .pagination a{
-	color:#b8860b
+	color:darkgrey
 }
 a:hover{
 	color:#009fd4;
@@ -186,7 +186,7 @@ footer{
 	color:#939393;
 	display:flex;
 	flex-direction:column-reverse;
-	align-items:center;
+	align-items:center
 }
 .sidebar-item p{
 	color:#939393;
@@ -250,10 +250,7 @@ footer{
 	clear:both;
 	padding:10px 0;
 	display:flex;
-	justify-content:space-between;
-	border-top:8px solid darkgrey;
-	border-bottom:8px solid darkgrey;
-	border-radius:10px
+	justify-content:space-between
 }
 .pagination__newer,
 .pagination__older{
@@ -299,7 +296,9 @@ footer{
 		justify-content:space-between;
 		flex-flow:row wrap;
 		align-items:center;
-		align-content:flex-start
+		align-content:flex-start;
+		border-top:8px solid darkgrey;
+		border-radius:10px
 	}
 	.page__full  section{
 		clear:both;
