@@ -218,7 +218,20 @@ footer{
 	text-transform:lowercase
 }
 .box--listing{
-	
+	display:flex;
+	justify-content:space-between;
+	flex-flow:row-wrap;
+	align-content:center;
+}
+.box--post{
+	width:30%
+}
+.box--post img{
+	width:100%
+}
+.box--post h4{
+	font-size: 2rem;
+	line-height:2.5rem
 }
 @media only screen and (min-width:590px){
 	.body__main,
