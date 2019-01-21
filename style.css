@@ -244,7 +244,7 @@ footer{
 		}
 	.site--header ul {
 		display:flex;
-		flex-flow:row wrap;
+		flex-flow:row-wrap;
 		list-style-type:none
 	}
 	.site--header ul li {
