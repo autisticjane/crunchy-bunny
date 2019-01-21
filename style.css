@@ -112,6 +112,12 @@ a:hover{
 	color:#009fd4;
 	border-bottom:1px solid #009fd4
 }
+.post--box a{
+		border:0 none
+}
+h4 a:hover{
+	border-bottom:1px solid #009fd4
+}
 /* --- Navigation --- */
 h1.title{
 	text-align:center;
@@ -233,10 +239,7 @@ footer{
 	text-align:center;
 	margin:10px 0;
 }
-.post--listing ul{
-	list-style-type:none;
-	margin:0;
-	padding:0;
+.post--listing span{
 	font-family:"Poppins",sans-serif;
 }
 @media only screen and (min-width:590px){
@@ -307,11 +310,5 @@ footer{
 		font-size: 1.5rem;
 		line-height:2rem;
 		font-size:1.5vw;
-	}
-	.post--listing ul{
-		list-style-type:none;
-		margin:0;
-		padding:0;
-		font-family:"Poppins",sans-serif;
 	}
 }
