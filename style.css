@@ -169,8 +169,8 @@ h1.title{
 /* --- Containers --- */
 header,
 .body__main,
-footer,
-footer ul,
+.site--footer,
+.site--footer ul,
 .full-sidebar{
 	margin:0 auto;
 	max-width:95%
@@ -178,7 +178,7 @@ footer ul,
 header,
 .body__main,
 .full-sidebar,
-footer{
+.site--footer{
 	padding:10px
 }
 .site--footer{
@@ -256,17 +256,35 @@ footer{
 .pagination__older{
 	font-family:"Poppins",sans-serif
 }
+.post__meta{
+	color:#939393;
+	font-size:1.2rem;
+}
+.post__meta ul{
+	list-style-type:none;
+	margin:5px 0;
+	padding:0
+}
+.post__taxonomy ul{
+	display:flex;
+	flex-direction:row;
+	margin:5px 0;
+	padding:0
+}
+.post__taxonomy ul li{
+	padding-right:5px
+}
 @media only screen and (min-width:590px){
 	.body__main,
 	header,
-	footer,
+	.site--footer,
 	.full-sidebar{
 		max-width:1024px
 	}
 	.body__main{
 		display:block
 	}
-	section{
+	section,article{
 		float:left;
 		max-width:70%
 	}
@@ -300,7 +318,7 @@ footer{
 		border-top:8px solid darkgrey;
 		border-radius:10px
 	}
-	.page__full  section{
+	.page__full  section,.page__full article{
 		clear:both;
 		max-width:100%
 	}
