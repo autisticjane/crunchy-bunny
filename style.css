@@ -268,6 +268,7 @@ header,
 .post__taxonomy ul{
 	display:flex;
 	flex-direction:row;
+	font-family:"Poppins",sans-serif;
 	margin:5px 0;
 	padding:0
 }
@@ -282,6 +283,13 @@ header,
 }
 .author-description{
 	padding:0 5px
+}
+.comments-respond h1,
+.comments h1{
+	font-size:2rem
+}
+.comments h2{
+	font-size:1.7rem
 }
 @media only screen and (min-width:590px){
 	.body__main,
