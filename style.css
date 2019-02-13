@@ -256,7 +256,7 @@ header,
 .pagination__older{
 	font-family:"Poppins",sans-serif
 }
-.post__meta{
+.post__meta,.comment__meta-item{
 	color:#939393;
 	font-size:1.2rem;
 }
@@ -279,7 +279,7 @@ header,
 	font-size:1.5rem
 }
 .author-bio{
-	font-size:1rem
+	font-size:1.2rem
 }
 .author-description{
 	padding:0 5px
@@ -290,6 +290,16 @@ header,
 }
 .comments h2{
 	font-size:1.7rem
+}
+.comments-list{
+	font-size:1.2rem;
+	margin:20px 0
+}
+.comments-list--child{
+	margin-left:1.5rem
+}
+.comment-reply-link{
+	font-family:"Poppins",sans-serif
 }
 @media only screen and (min-width:590px){
 	.body__main,
