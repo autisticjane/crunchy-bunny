@@ -1,5 +1,10 @@
 <?php
-// Cloak emails
+// Poop emoji to anyone who tries to view this directly
+    if ( !function_exists( 'add_action' ) ) {
+		echo '&#128169;';
+		exit;
+    }
+// Cloak emails [cloak email=you@domain.ext]
 	function email_cloaking_shortcode( $atts ) {
 		$atts = shortcode_atts(
 			array(
