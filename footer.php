@@ -4,13 +4,9 @@
 			<nav role="navigation" class="menu__footer">
 				<?php wp_nav_menu(
 					array $args = array(
-						'menu'              => "Main navigation", // (int|string|WP_Term) Desired menu. Accepts a menu ID, slug, name, or object.
-						'container'         => "nav", // (string) Whether to wrap the ul, and what to wrap it with. Default 'div'.
-						'container_class'   => "menu-header", // (string) Class that is applied to the container. Default 'menu-{menu slug}-container'.
-						'fallback_cb'       => "", // (callable|bool) If the menu doesn't exists, a callback function will fire. Default is 'wp_page_menu'. Set to false for no fallback.
-						'theme_location'    => "main-navigation", // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
-						'items_wrap'        => "", // (string) How the list items should be wrapped. Default is a ul with an id and class. Uses printf() format with numbered placeholders.
-						'item_spacing'      => "", // (string) Whether to preserve whitespace within the menu's HTML. Accepts 'preserve' or 'discard'. Default 'preserve'.
+						'menu'              => "Footer navigation",
+						'container'         => "nav",
+						'theme_location'    => "footer-navigation",
 					)
 				);
 				?>
