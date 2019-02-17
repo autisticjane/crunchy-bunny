@@ -6,7 +6,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 		<h1 rel="name"><?php echo $curauth->nickname; ?></h1>
 			<h2 class="subtitle"><?php echo get_user_meta($current_user->ID,'status',true);?></h2>
 				<div class="alignright">
-					<img src="https://janepedia.com/wp-content/uploads/2018/12/selfie-12-07-2018.jpg" width="150" class="hexagon">
+					<img src="<?php echo get_avatar( $curauth->user_email , '150 '); ?>" class="hexagon">
 				</div>
 				<p class="author-bio">
 					<?php echo (get_the_author_meta('description')); ?>
