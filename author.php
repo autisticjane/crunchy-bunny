@@ -4,7 +4,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 ?>
 	<section>
 		<h1 rel="name"><?php echo $curauth->nickname; ?></h1>
-			<h2 class="subtitle"><?php echo get_user_meta($current_user->ID,'status',true);?></h2>
+			<h2 class="subtitle"><?php echo get_user_meta($curauth->ID,'status',true);?></h2>
 				<div class="alignright">
 					<img src="<?php echo get_avatar( $curauth->user_email , '150 '); ?>" class="hexagon">
 				</div>
@@ -14,10 +14,10 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				<nav class="author-social">
 					<ul>
 						<li><a href="<?php echo $curauth->user_url; ?>" target="_blank">Website</a></li>
-						<li><a>Facebook</a></li>
-						<li><a>Instagram</a></li>
-						<li><a>Pinterest</a></li>
-						<li><a>Twitter</a></li>
+						<li><a href="<?php echo get_user_meta($curauth->ID,'facebook',true);?>" target="_blank">Facebook</a></li>
+						<li><a href="<?php echo get_user_meta($curauth->ID,'instagram',true);?>" target="_blank">Instagram</a></li>
+						<li><a href="<?php echo get_user_meta($curauth->ID,'pinterest',true);?>" target="_blank">Pinterest</a></li>
+						<li><a href="<?php echo get_user_meta($curauth->ID,'twitter',true);?>" target="_blank">Twitter</a></li>
 					</ul>
 				</nav>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
