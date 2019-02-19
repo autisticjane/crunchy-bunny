@@ -49,6 +49,21 @@
 		add_filter('mce_css', 'visual_editor_style');
 	// Disables theme & plugin editors
 		define( 'DISALLOW_FILE_EDIT', true );
+    // Function: Meta Description from Post Excerpt
+    
+    function meta_desc() {
+        if ( is_single() || is_page() ) {
+            if ( have_posts() ) {
+                while ( have_posts() ) {
+                    the_post();
+                    echo wp_strip_all_tags( get_the_excerpt() );
+                }
+            }
+        }
+        elseif ( is_home() ) {
+            echo bloginfo('description');
+        }
+    }
 	// Registers menus
 		function register_my_menu() {
 			register_nav_menu(
