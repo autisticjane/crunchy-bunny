@@ -22,7 +22,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 				</nav>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <article class="post--listing" itemscope itemtype="http://schema.org/BlogPosting">
-			<img src="https://janepedia.com/wp-content/uploads/2018/12/selfie-12-07-2018.jpg">
+			<img src="<?php echo get_first_image(); ?>">
 			<h4 itemprop="name"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent link to <?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h4>
 				<span><time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('n.d.y'); ?></time></span>
 				<meta itemprop="author" content="<?php the_author(); ?>">
