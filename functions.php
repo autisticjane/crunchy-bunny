@@ -4,6 +4,11 @@
 			echo '&#128169;';
 			exit;
 		}
+	// Allow HTML in taxonomy descriptions
+	    remove_filter( 'pre_term_description', 'wp_filter_kses' );
+		remove_filter( 'pre_link_description', 'wp_filter_kses' );
+		remove_filter( 'pre_link_notes', 'wp_filter_kses' );
+		remove_filter( 'term_description', 'wp_kses_data' );
 	// Cloak emails [cloak email=you@domain.ext]
 		function email_cloaking_shortcode( $atts ) {
 			$atts = shortcode_atts(
