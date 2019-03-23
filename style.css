@@ -519,9 +519,9 @@ img.aligncenter{
 		font-size:1.9vw;
 	}
 	.post__author{
-		border-bottom:8px solid darkgrey;
+		/*border-bottom:8px solid darkgrey;*/
 		border-top:8px solid darkgrey;
-		border-radius:10px
+		border-radius:10px;
 	}
 }
 @media screen and (min-width:580px) and (max-width:850px){
