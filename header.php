@@ -9,6 +9,7 @@
 		<link rel="dns-prefetch" href="//crunchyfamily.com/wp-content/uploads/">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather|Poppins:700,700i" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/images/default.png">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<?php if ( is_singular() && get_option( 'thread_comments') ) wp_enqueue_script( 'comment-reply' ); ?>
 		<?php wp_head(); ?>
