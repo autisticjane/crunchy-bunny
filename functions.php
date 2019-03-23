@@ -235,5 +235,17 @@
 			'after_title' => '</h2>')
 		);
 	// Stop WP fucking up images
-		add_filter( 'img_caption_shortcode_width', '__return_false' );
+		// No wrapping img in <p>
+			function filter_ptags_on_images($content){
+					// do a regular expression replace...
+					// find all p tags that have just
+					// <p>maybe some white space<img all stuff up to /> then maybe whitespace </p>
+					// replace it with just the image tag...
+					return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+				}
+
+				// we want it to be run after the autop stuff... 10 is default.
+				add_filter('the_content', 'filter_ptags_on_images');
+		// Remove inline CSS
+			add_filter( 'img_caption_shortcode_width', '__return_false' );
 ?>

@@ -97,14 +97,15 @@ h6{
 }
 h1{
 	font-size:3.5rem;
-	line-height:3.5rem
+	line-height:1.7
 }
 h2{
-	font-size:2.9rem;
+	font-size:3rem;
 }
 h3{
-	font-size:2.7rem;
+	font-size:2.5rem;
 	font-style:italic;
+	line-height:1.5
 }
 h2,
 h5{
@@ -115,7 +116,7 @@ h6{
 	color:#b8860b
 }
 h4{
-	font-size:2.4rem;
+	font-size:2.3rem;
 	line-height:1.5
 }
 h5{
@@ -160,7 +161,7 @@ h4 a:hover{
 	font-family:"Poppins",sans-serif
 }
 /* --- Accordions --- */
-.accordion{cursor:pointer;width:100%;border:none;text-align:left;outline:none;transition:0.4s}
+.accordion{cursor:pointer;width:100%;border:none;text-align:left;outline:none;transition:0.4s;font-size:2rem;line-height:1.5;font-style:normal}
 .active,.accordion:hover{color:#009fd4;border:none}
 .accordion:after{content:'\002B';color:#777;font-weight:bold;float:right;margin-left:5px}
 .active:after{content:"\2212"}
@@ -247,8 +248,9 @@ h1.title{
 .center{
 	text-align:center
 }
-.aligncenter{
+img.aligncenter{
 	clear:both;
+	display:block;
 	text-align:center
 }
 .alignright,
@@ -569,3 +571,9 @@ img{
 	max-width:100% !important;
 	max-height:100% !important
 }
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
