@@ -1,8 +1,18 @@
-<?php
-    get_header();
-    if ( have_posts() ) : ?>
-	<div class="post--box">
+<?php get_header(); ?>
+	<h1><?php single_cat_title(); ?></h1>
 	<?php
+            if ( category_description() ) :
+                echo category_description();
+            else :
+        ?>
+            <p>You are currently viewing the <strong><?php single_cat_title(); ?></strong> category. This category lacks a fancy description, probably because:</p>
+            <ul>
+                <li>It doesn't need one because it's self-explanatory.</li>
+                <li>We haven't gotten around to it yet because it's new.</li>
+            </ul>
+<?php endif; ?>
+	<div class="post--box">
+	<?php if ( have_posts() ) :
 	$postCount = 0;
 	while ( have_posts() ) :
 	the_post();
@@ -36,6 +46,8 @@
 			echo '</nav>';
 	endif;
     endif; ?>
+		</div><!-- body__main -->
+	</section>
 <?php
     get_footer();
 ?>

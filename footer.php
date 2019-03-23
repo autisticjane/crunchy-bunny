@@ -1,15 +1,8 @@
-		</div>
+	</main><!-- body--content -->
 		<footer class="site--footer">
 			<p>&copy; 2014-<?php echo date("Y"); ?> <?php bloginfo('name'); ?>&trade;</p>
 			<nav role="navigation" class="menu__footer">
-				<?php wp_nav_menu(
-					array $args = array(
-						'menu'              => "Footer navigation",
-						'container'         => "nav",
-						'theme_location'    => "footer-navigation",
-					)
-				);
-				?>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
 			</nav>
 		</footer>
        <!--js-->

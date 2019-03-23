@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=|MerriweatherPoppins:700');
+html,
+input,
+textarea{
+	font-variant-ligatures:none;
+	font-feature-settings:'liga' 0,'onum' 1,'kern' 1;
+	font:300 1.3rem "Merriweather", sans-serif;
+	margin:0 auto;
+	color:#444;
+	text-rendering: optimizeLegibility;
+	max-width:85%
+}
+::selection,
+::-moz-selection{
+	background:#e73c4e;
+	color:#fff
+}
+/* -- Links -- */
+a{
+	color:#e65722;
+	text-decoration:none
+}
+a:hover{
+	color:#009fd4;
+	border-bottom:1px solid #009fd4
+}
+a:focus{
+	background-color:#efefef
+}

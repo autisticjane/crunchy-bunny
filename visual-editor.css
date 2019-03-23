@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Poppins:700,700i');
+body{
+	font:400 1.3rem/2.3rem "Merriweather", sans-serif;
+	margin:0 auto;
+	color:#444;
+	text-rendering: optimizeLegibility;
+	max-width:85%
+}
+strong{
+	font-weight:600
+}
+i,em{
+	font-style:italic
+}
+code{
+	background:#eee;
+	border:2px solid #ddd;
+	border-radius:10px;
+	color:#e73c4e;
+	padding:5px 10px
+}
+strong > em,
+em > strong{
+	font-weight:600;
+	font-style:italic
+}
+small{
+	font:300 1rem/1.2rem "Poppins",sans-serif;
+}
+big{
+	font:300 1.2rem/1.4rem "Poppins",sans-serif;
+}
+::selection,
+::-moz-selection{
+	background:#e73c4e;
+	color:#fff
+}
+hr{
+	background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);	border:0;
+	border-radius:20px;
+	margin:0 auto;
+	height:8px;
+	width:95%
+}
+blockquote::before{
+
+	content: open-quote;
+	font: 300 5rem/0 Georgia, "Times New Roman", serif;
+	margin-right: 1rem;
+	vertical-align: -2rem
+}
+blockquote{
+	border-radius: 10px;
+	font:700 1.5rem/1.5 "Poppins",sans-serif;
+	margin: 1rem 1.5rem;
+	padding: 2rem 2.5rem;
+	quotes: '\201C' '\201D' '\2018' '\2019';
+}
+blockquote p:first-child{
+	display: inline;
+}
+blockquote:last-child{
+	margin-bottom:0
+}
+/* -- Images -- */
+img{
+	max-width:100%
+}
+.hexagon,
+.author-photo img{
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 77%, 50% 100%, 0% 75%, 0% 25%);
+}
+/* -- Headers -- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+h1{
+	font-size:3.5rem;
+	line-height:3.5rem
+}
+h2{
+	font-size:2.9rem;
+}
+h3{
+	font-size:2.7rem;
+	font-style:italic;
+}
+h2,
+h5{
+	color:#009fd4
+}
+h3,
+h6{
+	color:#b8860b
+}
+h4{
+	font-size:2.4rem;
+	line-height:1.5
+}
+h5{
+	font-size:2rem;
+	text-transform:uppercase
+}
+h6{
+	font-size:1.7rem
+}
+/* -- Links -- */
+a{
+	color:#e65722;
+	text-decoration:none
+}
+a:hover{
+	color:#009fd4;
+	border-bottom:1px solid #009fd4
+}
+a:focus{
+	background-color:#efefef
+}
+.post--box a{
+	border:0 none
+}
+h4 a:hover{
+	border-bottom:1px solid #009fd4
+}

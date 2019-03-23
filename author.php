@@ -1,51 +1,64 @@
 <?php get_header();
-// Set the Current Author Variable $curauth
-$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+global $wp_query;
+$curauth = $wp_query->get_queried_object();
 ?>
-	<section>
 		<h1 rel="name"><?php echo $curauth->nickname; ?></h1>
-			<h2 class="subtitle"><?php echo get_user_meta($curauth->ID,'status',true);?></h2>
-				<div class="alignright">
-					<img src="<?php echo get_avatar( $curauth->user_email , '150 '); ?>" class="hexagon">
-				</div>
-				<p class="author-bio">
-					<?php echo (get_the_author_meta('description')); ?>
-				</p>
-				<nav class="author-social">
-					<ul>
-						<li><a href="<?php echo $curauth->user_url; ?>" target="_blank">Website</a></li>
-						<li><a href="<?php echo get_user_meta($curauth->ID,'facebook',true);?>" target="_blank">Facebook</a></li>
-						<li><a href="<?php echo get_user_meta($curauth->ID,'instagram',true);?>" target="_blank">Instagram</a></li>
-						<li><a href="<?php echo get_user_meta($curauth->ID,'pinterest',true);?>" target="_blank">Pinterest</a></li>
-						<li><a href="<?php echo get_user_meta($curauth->ID,'twitter',true);?>" target="_blank">Twitter</a></li>
-					</ul>
-				</nav>
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <article class="post--listing" itemscope itemtype="http://schema.org/BlogPosting">
-			<img src="<?php echo get_first_image(); ?>">
-			<h4 itemprop="name"><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent link to <?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h4>
-				<span><time datetime="<?php the_time('Y-m-d'); ?>T<?php the_time('H:iP'); ?>" itemprop="datePublished"><?php the_time('n.d.y'); ?></time></span>
-				<meta itemprop="author" content="<?php the_author(); ?>">
-				<meta itemprop="inLanguage" content="en">
-				<meta itemprop="copyrightYear" content="<?php the_time('Y'); ?>">
-				<meta itemprop="commentCount" content="<?php echo get_comments_number(); ?>">
-				<meta itemprop="thumbnailUrl" content="<?php $image_id = get_post_thumbnail_id(); $image_url = wp_get_attachment_image_src($image_id,'large', true); echo $image_url[0]; ?>">
-				<?php image_url_meta(); ?>
-		</article>
-	<?php endwhile; ?>
-	</section>
+		<div class="alignright author-photo">
+			<?php
+				$author_bio_avatar_size = apply_filters( 'twentysixteen_author_bio_avatar_size', 175 );
+				echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
+			?>
+		</div>
+		<h2 class="subtitle"><?php if ($curauth->ID == '1') { echo "Founder"; } elseif ($curauth->ID == '2') { echo "Editor"; } else { echo "Contributor"; } ?></h2>
+		<p class="author-bio"><?php echo $curauth->description; ?></p>
+			<nav class="author-social">
+				<ul>
+					<?php if ( $curauth->user_url ) { ?><li><a href="<?php echo $curauth->user_url; ?>" target="_blank">Website</a></li><?php } ?>
+					<?php if ( $curauth->facebook ) { ?><li><a href="<?php echo get_user_meta($curauth->ID,'facebook',true);?>" target="_blank">Facebook</a></li><?php } ?>
+					<?php if ( $curauth->instagram ) { ?><li><a href="<?php echo get_user_meta($curauth->ID,'instagram',true);?>" target="_blank">Instagram</a></li><?php } ?>
+					<?php if ( $curauth->pinterest ) { ?><li><a href="<?php echo get_user_meta($curauth->ID,'pinterest',true);?>" target="_blank">Pinterest</a></li><?php } ?>
+					<?php if ( $curauth->twitter ) { ?><li><a href="<?php echo get_user_meta($curauth->ID,'twitter',true);?>" target="_blank">Twitter</a></li><?php } ?>
+				</ul>
+			</nav>
+	<?php if ( have_posts() ) : ?>
+	<h2>Previous posts</h2>
+	<div class="post--box">
 	<?php
-        if( get_next_posts_link() || get_previous_posts_link() ) {
-            echo '<nav class="pagination">';
-        }
-
-        previous_posts_link('<span class="pagination__newer">&laquo; Newer posts</span>');
-        next_posts_link('<span class="pagination__older">Older posts &raquo;</span>');
-
-        if( get_next_posts_link() || get_previous_posts_link() ) {
-            echo '</nav>';
-        }
-    else :
-	endif;
-	get_footer();
+	$postCount = 0;
+	while ( have_posts() ) :
+	the_post();
+	$image = get_first_image();
+	$postCount++;
 	?>
+		<article class="post--listing" itemscope itemtype="http://schema.org/BlogPosting">
+			<img src="<?php echo $image; ?>" alt="Featured image for <?php echo the_title(); ?>">
+			<h2 itemprop="name"><a href="<?php echo get_permalink(); ?>" rel="bookmark" itemprop="url"><?php echo the_title(); ?></a></h2>
+			<time aria-label="Time stamp of blog post" datetime="<?php echo get_the_date('Y-m-d'); ?>T<?php echo get_the_date('H:iP'); ?>" itemprop="datePublished"><?php
+		if ( $postCount == 1 && !is_paged() ) :
+				echo 'Latest post</time>';
+		else :
+				echo the_time('n.d.y');
+?></time><?php endif; ?>
+			
+			<meta itemprop="author" content="<?php the_author(); ?>">
+			<meta itemprop="inLanguage" content="en">
+			<meta itemprop="copyrightYear" content="<?php the_time('Y'); ?>">
+			<meta itemprop="commentCount" content="<?php echo get_comments_number(); ?>">
+			<meta itemprop="url" content="<?php echo get_permalink(); ?>">
+			<meta itemprop="wordCount" content="<?php echo wordcount(); ?>">
+		</article>
+
+<?php endwhile; ?>
+	</div><!-- post--box -->
+		<?php if (get_next_posts_link() || get_previous_posts_link()) :
+			echo '<nav class="pagination">';
+			next_posts_link('Older posts &raquo;');
+			previous_posts_link('&laquo; Newer posts');
+			echo '</nav>';
+	endif;
+    endif; ?>
+		</div><!-- body__main -->
+	</section>
+<?php
+    get_footer();
+?>
