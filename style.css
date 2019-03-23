@@ -240,7 +240,8 @@ h1.title{
 .sidebar-item{
 	color:#939393;
 	font:300 1rem/1.6rem "Poppins",sans-serif;
-	text-align:center
+	text-align:center;
+	padding: 10px 0 5px
 }
 /* -- Classes -- */
 .center{
