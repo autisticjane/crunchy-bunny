@@ -159,6 +159,12 @@ h4 a:hover{
 .tag-cloud-link{
 	font-family:"Poppins",sans-serif
 }
+/* --- Accordions --- */
+.accordion{cursor:pointer;width:100%;border:none;text-align:left;outline:none;transition:0.4s}
+.active,.accordion:hover{color:#009fd4;border:none}
+.accordion:after{content:'\002B';color:#777;font-weight:bold;float:right;margin-left:5px}
+.active:after{content:"\2212"}
+.panel{padding:0;max-height:0;overflow:hidden;transition:max-height 0.2s ease-out}
 /* --- Navigation --- */
 h1.title{
 	text-align:center;
