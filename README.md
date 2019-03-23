@@ -16,4 +16,4 @@ Imperfections lie within, but perfection was not the goal prior to release, sinc
 + ``h1`` too big when shrunken window size; quick fix = word break & hyphenation
 + featured image not always proportional if pulling first image in case of no thumbnail selected
 + ``header`` navigation is weird the shorter the window gets
-+ ~~~wordpress screws up images with inline CSS~~~ fixed by adding ``add_filter( 'img_caption_shortcode_width', '__return_false' );`` to functions.php
++ <del>wordpress screws up images with inline CSS</del> fixed by adding ``add_filter( 'img_caption_shortcode_width', '__return_false' );`` to functions.php
