@@ -2,8 +2,8 @@
 /**
 * Template Name: Archive
 * Template Post Type: page
-* @package Simplest
-* @subpackage Simplest
+* @package Crunchy Bunny
+* @subpackage Crunchy Bunny
 */
 get_header(); ?>
 <div class="full-width--content">

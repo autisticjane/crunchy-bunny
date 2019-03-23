@@ -227,11 +227,13 @@
     // Register sidebar
 		if ( function_exists('register_sidebar') )
 			register_sidebar( array(
-			'name' => __( 'Sidebar', 'simplest' ),
+			'name' => __( 'Sidebar', 'crunchy-bunny' ),
 			'id' => 'right-sidebar',
 			'before_widget' => '<!-- start widget --><div class="sidebar-item">',
 			'after_widget' => '</div><!-- end widget -->',
 			'before_title' => '<h2>',
 			'after_title' => '</h2>')
 		);
+	// Stop WP fucking up images
+		add_filter( 'img_caption_shortcode_width', '__return_false' );
 ?>
