@@ -9,7 +9,7 @@ $curauth = $wp_query->get_queried_object();
 				echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
 			?>
 		</div>
-		<h2 class="subtitle"><?php if ($curauth->ID == '1') { echo "Founder"; } elseif ($curauth->ID == '2') { echo "Editor"; } else { echo "Contributor"; } ?></h2>
+		<h2 class="subtitle"><?php if ($curauth->ID == '2') { echo "Founder"; } elseif ($curauth->ID == '12') { echo "Editor"; } else { echo "Contributor"; } ?></h2>
 		<p class="author-bio"><?php echo $curauth->description; ?></p>
 			<nav class="author-social">
 				<ul>
